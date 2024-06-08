@@ -1,0 +1,43 @@
+{
+    "title": "Conveni entre l'Agència de l'Habitatge de Catalunya, el Departament d'Economia i Hisenda, Avalis de Catalunya, SGR, l'Institut Català de Finances i diverses entitats financeres, per al finançament a comunitats de propietaris i persones físiques i jurídiques privades, per als programes d'ajudes en matèria de rehabilitació residencial del Pla de recuperació, transformació i resiliència, finançat en el marc dels fons Next Generation EU.",
+    "date": "2022-02-18",
+    "people": [
+        {
+            "name": "Jaume Giró i Ribas",
+            "organization": "Departament d'Economia i Hisenda",
+            "role": "Conseller",
+            "document": null
+        },
+        {
+            "name": "Violant Cervera i Gòdia",
+            "organization": "Departament de Drets Socials",
+            "role": "Consellera",
+            "document": null
+        },
+        {
+            "name": "Jaume Fornt i Paradell",
+            "organization": "Agència de l'Habitatge de Catalunya",
+            "role": "Director",
+            "document": null
+        },
+        {
+            "name": "Jordi Òliva i Ritort",
+            "organization": "Institut Català de Finances (ICF)",
+            "role": "Conseller delegat",
+            "document": null
+        },
+        {
+            "name": "Josep Lores i García",
+            "organization": "Avalis de Catalunya, SGR",
+            "role": "Conseller delegat",
+            "document": null
+        }
+    ],
+    "code": "2022/9/0304",
+    "url": "https://registredeconvenis.gencat.cat/drep_rccc/public/Convenis.do?accion=DownloadDocumentsConveni&numFila=0&numConveni=2022/P/0126",
+    "metadata": {
+        "model_name": "claude-3-haiku",
+        "start_time": "2024-05-18T17:51:51Z",
+        "total_time": 3.3132269382476807
+    }
+}

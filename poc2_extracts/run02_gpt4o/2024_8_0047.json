@@ -1,0 +1,23 @@
+{
+    "title": "Document d’adhesió al conveni en matèria de finançament destinat als ajuts de l’Agència de l’Habitatge de Catalunya",
+    "date": "2024-02-12",
+    "people": [
+        {
+            "name": "Raimon Royo Uño",
+            "organization": "Arquia Bank, SA",
+            "role": "Director General Adjunt",
+            "document": "escriptura atorgada davant el notari , en data 28 de juliol de 2017, número del seu protocol 1.631, i inscrita al Registre Mercantil de Barcelona, en data 25 d’agost de 2017, en el volum 46.011, foli 220, full B-2.363, inscripció 308a. Aquest apoderament va ser ratificat segons escriptura atorgada davant el notari , en data 6 d’octubre de 2017 i inscrita al Registre Mercantil de Madrid, en el volum 36.871, foli 136, full M-659.820, inscripció 36a."
+        }
+    ],
+    "code": "2024/8/0047",
+    "url": "https://registredeconvenis.gencat.cat/drep_rccc/public/Convenis.do?accion=DownloadDocumentsConveni&numFila=0&numConveni=2024/P/0465",
+    "metadata": {
+        "model_name": "gpt-4o",
+        "start_time": "2024-05-18T17:42:55Z",
+        "total_time": 3.7840938568115234,
+        "prompt_tokens": 1608,
+        "completion_tokens": 228,
+        "total_tokens": 1836,
+        "total_cost": 0.0
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "title": "Document d’adhesió al conveni en matèria de finançament destinat als ajuts de l’Agència de l’Habitatge de Catalunya",
+    "date": "2024-03-13",
+    "people": [
+        {
+            "name": "Ignacio Torre Sola",
+            "organization": "Ibercaja Banc, SA",
+            "role": "Director de Màrqueting i Estratègia Digital",
+            "document": "escriptura atorgada davant el notari, en data 15 de març de 2017, número del seu protocol 589, i inscrita al Registre Mercantil de Saragossa, en data 28 de març de 2017, en el volum 4.176, foli 222, full Z-52.186, inscripció 1.225a"
+        }
+    ],
+    "code": "2024/8/0052",
+    "url": "https://registredeconvenis.gencat.cat/drep_rccc/public/Convenis.do?accion=DownloadDocumentsConveni&numFila=0&numConveni=2024/P/0475",
+    "metadata": {
+        "model_name": "gpt-4o",
+        "start_time": "2024-05-18T17:43:14Z",
+        "total_time": 2.556018114089966,
+        "prompt_tokens": 1588,
+        "completion_tokens": 166,
+        "total_tokens": 1754,
+        "total_cost": 0.0
+    }
+}

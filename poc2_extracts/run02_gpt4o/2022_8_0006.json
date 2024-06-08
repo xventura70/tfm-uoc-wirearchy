@@ -1,0 +1,23 @@
+{
+    "title": "Document d’adhesió al Conveni en matèria de finançament destinat als ajuts de l’Agència de l’Habitatge de Catalunya",
+    "date": "2022-02-18",
+    "people": [
+        {
+            "name": "David Baños Baeza",
+            "organization": "BANC SANTANDER, SA",
+            "role": "apoderat mancomunat",
+            "document": "escriptura atorgada davant el notari, en data 21 d’abril de 1998, número del seu protocol 1.316, i inscrita al Registre Mercantil de Cantabria, en data 25 de maig de 1998, en el volum 611, foli 68, full S-1.960, inscripció 402a, i segons escriptura atorgada davant el notari, en data 10 d’abril de 2013, número del seu protocol 2.287, i inscrita al Registre Mercantil de Cantabria, en el volum 1.006, foli 220, full S-1.960, inscripció 2.312a"
+        }
+    ],
+    "code": "2022/8/0006",
+    "url": "https://registredeconvenis.gencat.cat/drep_rccc/public/Convenis.do?accion=DownloadDocumentsConveni&numFila=0&numConveni=2022/P/0129",
+    "metadata": {
+        "model_name": "gpt-4o",
+        "start_time": "2024-05-18T17:42:11Z",
+        "total_time": 3.2548160552978516,
+        "prompt_tokens": 1652,
+        "completion_tokens": 236,
+        "total_tokens": 1888,
+        "total_cost": 0.0
+    }
+}

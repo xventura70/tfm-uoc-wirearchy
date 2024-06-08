@@ -1,0 +1,19 @@
+{
+    "title": null,
+    "date": "2022-02-24",
+    "people": [
+        {
+            "name": "Serveis Administració Electrònica Generalitat de Catalunya",
+            "organization": "Generalitat de Catalunya",
+            "role": null,
+            "document": null
+        }
+    ],
+    "code": "2022/8/0013",
+    "url": "https://registredeconvenis.gencat.cat/drep_rccc/public/Convenis.do?accion=DownloadDocumentsConveni&numFila=0&numConveni=2022/P/0136",
+    "metadata": {
+        "model_name": "claude-3-opus",
+        "start_time": "2024-05-18T18:09:41Z",
+        "total_time": 12.366092205047607
+    }
+}

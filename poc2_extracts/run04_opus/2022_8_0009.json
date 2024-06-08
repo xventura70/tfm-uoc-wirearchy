@@ -1,0 +1,43 @@
+{
+    "title": "Adhesion Document to the Agreement on financing for grants from the Housing Agency of Catalonia",
+    "date": "2022-02-23",
+    "people": [
+        {
+            "name": "Joan Cavallé Miranda",
+            "organization": "CAIXA DE CRÈDIT DELS ENGINYERS-CAJA DE CRÉDITO DE LOS INGENIEROS, S.COOP. DE CRÉDITO",
+            "role": "Director General",
+            "document": null
+        },
+        {
+            "name": null,
+            "organization": "Housing Agency of Catalonia",
+            "role": null,
+            "document": null
+        },
+        {
+            "name": null,
+            "organization": "Department of Economy and Finance of the Generalitat de Catalunya",
+            "role": null,
+            "document": null
+        },
+        {
+            "name": null,
+            "organization": "Avalis de Catalunya, SGR",
+            "role": null,
+            "document": null
+        },
+        {
+            "name": null,
+            "organization": "Catalan Institute of Finance",
+            "role": null,
+            "document": null
+        }
+    ],
+    "code": "2022/8/0009",
+    "url": "https://registredeconvenis.gencat.cat/drep_rccc/public/Convenis.do?accion=DownloadDocumentsConveni&numFila=0&numConveni=2022/P/0132",
+    "metadata": {
+        "model_name": "claude-3-opus",
+        "start_time": "2024-05-18T18:08:21Z",
+        "total_time": 24.792465209960938
+    }
+}

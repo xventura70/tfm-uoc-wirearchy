@@ -1,0 +1,23 @@
+{
+    "title": "Document d’adhesió al conveni en matèria de finançament destinat als ajuts de l’Agència de l’Habitatge de Catalunya concedits en el marc del Reial decret 853/2021, de 5 d’octubre, pel qual es regulen els programes d'ajuda en matèria de rehabilitació residencial i habitatge social del Pla de recuperació, transformació i resiliència, dins de l’instrument de recuperació Next Generation EU, modificat en data 7 de febrer de 2024.",
+    "date": "2024-02-23",
+    "people": [
+        {
+            "name": "Maria Alsina Call",
+            "organization": "CaixaBank, SA",
+            "role": "apoderada",
+            "document": "escriptura atorgada davant el notari , en data 16 d’octubre de 2017, número del seu protocol 2.722, i inscrita al Registre Mercantil de València, en data 6 de novembre de 2017, en el volum 10.370, foli1, full V-178.351, inscripció 3a"
+        }
+    ],
+    "code": "2024/8/0055",
+    "url": "https://registredeconvenis.gencat.cat/drep_rccc/public/Convenis.do?accion=DownloadDocumentsConveni&numFila=0&numConveni=2024/P/0483",
+    "metadata": {
+        "model_name": "gpt-4o",
+        "start_time": "2024-05-18T17:43:21Z",
+        "total_time": 3.814858913421631,
+        "prompt_tokens": 1587,
+        "completion_tokens": 238,
+        "total_tokens": 1825,
+        "total_cost": 0.0
+    }
+}

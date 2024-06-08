@@ -1,0 +1,23 @@
+{
+    "title": "Document d’adhesió al Conveni en matèria de finançament destinat als ajuts de l’Agència de l’Habitatge de Catalunya concedits en el marc del Reial decret 853/2021, de 5 d’octubre",
+    "date": "2022-02-18",
+    "people": [
+        {
+            "name": "David Massana Gracia",
+            "organization": "Banc de Sabadell, SA",
+            "role": "apoderat",
+            "document": "escriptura atorgada davant el notari, en data 25 de juliol de 2019, número del seu protocol 2.774, i inscrita al Registre Mercantil d’Alacant, en data 16 d’agost de 2019, en el volum 4.070, foli 85, full A-156.980, inscripció 164a"
+        }
+    ],
+    "code": "2022/8/0005",
+    "url": "https://registredeconvenis.gencat.cat/drep_rccc/public/Convenis.do?accion=DownloadDocumentsConveni&numFila=0&numConveni=2022/P/0128",
+    "metadata": {
+        "model_name": "gpt-4o",
+        "start_time": "2024-05-18T17:42:07Z",
+        "total_time": 3.7574219703674316,
+        "prompt_tokens": 1572,
+        "completion_tokens": 182,
+        "total_tokens": 1754,
+        "total_cost": 0.0
+    }
+}

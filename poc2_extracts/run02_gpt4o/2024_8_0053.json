@@ -1,0 +1,23 @@
+{
+    "title": "Document d’adhesió al conveni en matèria de finançament destinat als ajuts de l’Agència de l’Habitatge de Catalunya concedits en el marc del Reial decret 853/2021, de 5 d’octubre, pel qual es regulen els programes d'ajuda en matèria de rehabilitació residencial i habitatge social del Pla de recuperació, transformació i resiliència, dins de l’instrument de recuperació Next Generation EU, modificat en data 7 de febrer de 2024.",
+    "date": "2024-02-26",
+    "people": [
+        {
+            "name": "Philippe Jacques Laporte",
+            "organization": "Unió de Crèdits Immobiliaris, SA, Establiment Financer de Crèdit",
+            "role": "Director d’operacions (COO)",
+            "document": "escriptura atorgada davant el notari en data 19 de juny de 1997, número del seu protocol 2.859"
+        }
+    ],
+    "code": "2024/8/0053",
+    "url": "https://registredeconvenis.gencat.cat/drep_rccc/public/Convenis.do?accion=DownloadDocumentsConveni&numFila=0&numConveni=2024/P/0477",
+    "metadata": {
+        "model_name": "gpt-4o",
+        "start_time": "2024-05-18T17:43:17Z",
+        "total_time": 4.096016883850098,
+        "prompt_tokens": 1585,
+        "completion_tokens": 213,
+        "total_tokens": 1798,
+        "total_cost": 0.0
+    }
+}

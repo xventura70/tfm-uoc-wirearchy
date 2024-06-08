@@ -1,0 +1,23 @@
+{
+    "title": "Document d’adhesió al Conveni en matèria de finançament destinat als ajuts de l’Agència de l’Habitatge de Catalunya",
+    "date": "2022-02-18",
+    "people": [
+        {
+            "name": "Alfonso Sáez Alonso-Muñumer",
+            "organization": "BANKINTER CONSUMER FINANCE EFC, SA",
+            "role": "Conseller-Director General",
+            "document": null
+        }
+    ],
+    "code": "2022/8/0007",
+    "url": "https://registredeconvenis.gencat.cat/drep_rccc/public/Convenis.do?accion=DownloadDocumentsConveni&numFila=0&numConveni=2022/P/0130",
+    "metadata": {
+        "model_name": "gpt-3.5-turbo",
+        "start_time": "2024-05-18T17:25:31Z",
+        "total_time": 1.7207622528076172,
+        "prompt_tokens": 1815,
+        "completion_tokens": 92,
+        "total_tokens": 1907,
+        "total_cost": 0.0029065000000000002
+    }
+}

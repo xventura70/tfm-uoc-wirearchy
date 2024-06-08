@@ -1,0 +1,23 @@
+{
+    "title": "Conveni en matèria de finançament destinat als ajuts de l’Agència de l’Habitatge de Catalunya",
+    "date": "2024-02-20",
+    "people": [
+        {
+            "name": "Joan Cavallé Miranda",
+            "organization": "CAIXA DE CRÈDIT DELS ENGINYERS-CAJA DE CRÉDITO DE LOS INGENIEROS, S.COOP. DE CRÈDIT",
+            "role": "Director General",
+            "document": null
+        }
+    ],
+    "code": "2024/8/0050",
+    "url": "https://registredeconvenis.gencat.cat/drep_rccc/public/Convenis.do?accion=DownloadDocumentsConveni&numFila=0&numConveni=2024/P/0473",
+    "metadata": {
+        "model_name": "gpt-3.5-turbo",
+        "start_time": "2024-05-18T17:26:12Z",
+        "total_time": 2.337246894836426,
+        "prompt_tokens": 1862,
+        "completion_tokens": 106,
+        "total_tokens": 1968,
+        "total_cost": 0.0030050000000000003
+    }
+}

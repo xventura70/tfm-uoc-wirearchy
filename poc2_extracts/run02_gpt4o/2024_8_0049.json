@@ -1,0 +1,23 @@
+{
+    "title": "Document d’adhesió al conveni en matèria de finançament destinat als ajuts de l’Agència de l’Habitatge de Catalunya",
+    "date": "2024-02-21",
+    "people": [
+        {
+            "name": "José Raúl Pérez González de Uriarte",
+            "organization": "Banc Bilbao Vizcaya Argentaria, SA",
+            "role": "apoderat",
+            "document": "escriptura atorgada davant el notari en data 3 de desembre de 2020, número del seu protocol 2216, i inscrita al Registre Mercantil de Bizkaia, en data 9 de desembre de 2020, en el volum 5.928, foli 153, full BI-17-A, inscripció 4.164a"
+        }
+    ],
+    "code": "2024/8/0049",
+    "url": "https://registredeconvenis.gencat.cat/drep_rccc/public/Convenis.do?accion=DownloadDocumentsConveni&numFila=0&numConveni=2024/P/0472",
+    "metadata": {
+        "model_name": "gpt-4o",
+        "start_time": "2024-05-18T17:43:03Z",
+        "total_time": 2.644097089767456,
+        "prompt_tokens": 1612,
+        "completion_tokens": 165,
+        "total_tokens": 1777,
+        "total_cost": 0.0
+    }
+}

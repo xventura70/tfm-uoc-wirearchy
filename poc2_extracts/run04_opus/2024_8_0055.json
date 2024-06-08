@@ -1,0 +1,19 @@
+{
+    "title": "null",
+    "date": "null",
+    "people": [
+        {
+            "name": "Maria Alsina Call",
+            "organization": "CaixaBank, SA",
+            "role": null,
+            "document": null
+        }
+    ],
+    "code": "2024/8/0055",
+    "url": "https://registredeconvenis.gencat.cat/drep_rccc/public/Convenis.do?accion=DownloadDocumentsConveni&numFila=0&numConveni=2024/P/0483",
+    "metadata": {
+        "model_name": "claude-3-opus",
+        "start_time": "2024-05-18T18:12:51Z",
+        "total_time": 14.98655104637146
+    }
+}

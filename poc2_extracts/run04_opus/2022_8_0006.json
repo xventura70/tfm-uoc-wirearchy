@@ -1,0 +1,25 @@
+{
+    "title": "null",
+    "date": "null",
+    "people": [
+        {
+            "name": "David Baños Baeza",
+            "organization": "BANCO SANTANDER, SA",
+            "role": "apoderado mancomunado",
+            "document": "DNI "
+        },
+        {
+            "name": " Garcia",
+            "organization": "BANCO SANTANDER, SA",
+            "role": "apoderado mancomunado",
+            "document": "DNI "
+        }
+    ],
+    "code": "2022/8/0006",
+    "url": "https://registredeconvenis.gencat.cat/drep_rccc/public/Convenis.do?accion=DownloadDocumentsConveni&numFila=0&numConveni=2022/P/0129",
+    "metadata": {
+        "model_name": "claude-3-opus",
+        "start_time": "2024-05-18T18:07:30Z",
+        "total_time": 15.879439115524292
+    }
+}

@@ -1,0 +1,84 @@
+[
+    {
+        "id": "Q001",
+        "question": "Qui és el president de la Generalitat de Catalunya?"
+    },
+    {
+        "id": "Q002",
+        "question": "Qui té actualment el càrrec de 'President de la Generalitat de Catalunya'?"
+    },    
+    {
+        "id": "Q003",
+        "question": "Qui és el responsable de Direcció General de Turisme?"
+    },
+    {
+        "id": "Q004",
+        "question": "Quina és la estructura del Parlament de Catalunya?"
+    },
+    {
+        "id": "Q005",
+        "question": "Quines reunions s'han celebrat amb el Grup Universitat Oberta de Catalunya?"
+    },
+    {
+        "id": "Q006",
+        "question": "Qui es va reunir amb el grup Universitat Oberta de Catalunya?"
+    },
+    {
+        "id": "Q007",
+        "question": "Qui és Jaume Giró Ribas?"
+    },
+    {
+        "id": "Q008",
+        "question": "Quan es va reunir en Tomàs Roy Català amb el grup Universitat Oberta de Catalunya? I quin tema es va tractar?"
+    },
+    {
+        "id": "Q009",
+        "question": "Amb qui s'ha reunit en Tomàs Roy Català?"
+    },
+    {
+        "id": "Q010",
+        "question": "Llista les 10 persones amb més carrecs"
+    },
+    {
+        "id": "Q011",
+        "question": "Parlam sobre Elisenda Guillaumes Cullell?",
+        "comment": "https://direcciopublica.transparencia.gencat.cat/personas/elisenda-guillaumes-cullell"
+    },
+    {
+        "id": "Q012",
+        "question": "Quina és la relació entre 'Miquel Salazar Canalda' i 'Joan Vintró Castells'? Descriu la relació pas a pas."
+    },
+    {
+        "id": "Q013",
+        "question": "Quins grups s'han reunit per tractar sobre la sequera? Incloure el tema de la reunió i la data."
+    },
+    {
+        "id": "Q014",
+        "question": "Amb quins grups s'ha parlat més sobre la sequera?"
+    },
+    {
+        "id": "Q015",
+        "question": "Quines persones han estan més actives en relació a la sequera? Mostra la llista de les 5 persones per any."
+    },
+    {
+        "id": "Q016",
+        "question": "Quins organismes han mantingut més reunions per tractar sobre la sequera?"
+    },
+    {
+        "id": "Q017",
+        "question": "Quina va ser la reunió amb més participants l'any 2023?"
+    },
+    {
+        "id": "Q018",
+        "question": "Què saps del conveni 2022/9/0304?"
+    },
+    {
+        "id": "Q019",
+        "question": "Qui ha signat el conveni 2022/9/0304? Inclou tots els convenis relacionats. Llista les entitats i el nom de la persona i el seu càrrec."
+    },
+    {
+        "id": "Q020",
+        "question": "Llista totes les persones, organitzacions i grups que han signat el conveni 2022/9/0304. Inclou tots els convenis relacionats amb el 2022/9/0304."
+    }
+
+]

@@ -1,0 +1,51 @@
+{
+"GPT35_P0":  {
+        "id": "GPT35_P0",
+        "description": "gpt-3.5-turbo default prompt",
+        "llm": "gpt-3.5-turbo"
+    },
+"GPT4O_P0": {
+        "id": "GPT4O_P0",
+        "description": "gpt-4o default prompt",
+        "llm": "gpt-4o"
+    },
+"GPT35_P1":    {
+        "id": "GPT35_P1",
+        "description": "gpt-3.5-turbo complex prompt 1",
+        "llm": "gpt-3.5-turbo",
+        "cypher_prompt_template": "prompt_template_1"
+    },
+"GPT4O_P1":    {
+        "id": "GPT4O_P1",
+        "description": "gpt-4o complex prompt 1",
+        "llm": "gpt-4o",
+        "cypher_prompt_template": "prompt_template_1"
+    },
+"HAIKU_P1": {
+        "id": "HAIKU_P1",
+        "description": "claude-3-haiku complex prompt 1",
+        "llm": "claude-3-haiku",
+        "cypher_prompt_template": "prompt_template_1",
+        "requests_per_minute": 2
+    },
+"OPUS_P1":  {
+        "id": "OPUS_P1",
+        "description": "claude-3-opus complex prompt 1",
+        "llm": "claude-3-opus",
+        "cypher_prompt_template": "prompt_template_1",
+        "requests_per_minute": 2
+    },
+"GPT4O_P2":    {
+        "id": "GPT4O_P2",
+        "description": "gpt-4o complex prompt 2",
+        "llm": "gpt-4o",
+        "cypher_prompt_template": "prompt_template_2"
+    },
+"OPUS_P2":    {
+        "id": "OPUS_P2",
+        "description": "claude-3-opus complex prompt 2",
+        "llm": "claude-3-opus",
+        "cypher_prompt_template": "prompt_template_2",
+        "requests_per_minute": 2
+    }
+}

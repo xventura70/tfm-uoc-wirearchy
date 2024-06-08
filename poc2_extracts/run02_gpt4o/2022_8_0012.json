@@ -1,0 +1,23 @@
+{
+    "title": "Document d’adhesió al Conveni en matèria de finançament destinat als ajuts de l’Agència de l’Habitatge de Catalunya concedits en el marc del Reial decret 853/2021, de 5 d’octubre, pel qual es regulen els programes d'ajuda en matèria de rehabilitació residencial i habitatge social del Pla de recuperació, transformació i resiliència, dins de l’instrument de recuperació Next Generation EU",
+    "date": "2022-02-18",
+    "people": [
+        {
+            "name": "Roberto Colomer Blasco",
+            "organization": "Unió de Crèdits Immobiliaris, SA, Establiment Financer de Crèdit",
+            "role": "Director General",
+            "document": null
+        }
+    ],
+    "code": "2022/8/0012",
+    "url": "https://registredeconvenis.gencat.cat/drep_rccc/public/Convenis.do?accion=DownloadDocumentsConveni&numFila=0&numConveni=2022/P/0135",
+    "metadata": {
+        "model_name": "gpt-4o",
+        "start_time": "2024-05-18T17:42:31Z",
+        "total_time": 2.7670400142669678,
+        "prompt_tokens": 1591,
+        "completion_tokens": 165,
+        "total_tokens": 1756,
+        "total_cost": 0.0
+    }
+}

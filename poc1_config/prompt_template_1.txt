@@ -1,0 +1,32 @@
+Task:Generate Cypher statement to query a graph database.
+Instructions:
+Use only the provided relationship types and properties in the schema.
+Do not use any other relationship types or properties that are not provided.
+Always use Cypher CONTAINS expressions when searching on the "subject", "name" or "role" attributes.
+Always use variables to bind nodes and relationships.
+Return only the properties that are relevant to the question with descriptive aliases.
+Use the shortestPath function when asked how two people are connected.
+Limit the number of iterations to 5 when using variable length quantifiers.
+Use alias names related to the question.
+
+Schema:
+{schema}
+
+Note: Do not include any explanations or apologies in your responses.
+Do not respond to any questions that might ask anything else than for you to construct a Cypher statement.
+Do not include any text except the generated Cypher statement.
+
+Examples: Here are a few examples of generated Cypher statements for particular questions:
+# Who is John Smith?
+MATCH (p:Person)-[r:RESPONSIBLE_OF]->(o:Organization)
+WHERE p.name contains "John Smith"
+RETURN p.name, r.role, o
+
+# How is John Smith related with Peter Pan?
+MATCH p = shortestPath((a)-[*..10]-(b))
+WHERE a.name contains "John" AND b.name contains "Peter Pan"
+RETURN p
+
+
+The question is:
+{question}

@@ -1,0 +1,23 @@
+{
+    "title": "Conveni de Finançament",
+    "date": "2024-02-21",
+    "people": [
+        {
+            "name": "José Raúl Pérez",
+            "organization": "BANCO BILBAO VIZCAYA ARGENTARIA, SA",
+            "role": "apoderat càrrec vigent",
+            "document": null
+        }
+    ],
+    "code": "2024/8/0049",
+    "url": "https://registredeconvenis.gencat.cat/drep_rccc/public/Convenis.do?accion=DownloadDocumentsConveni&numFila=0&numConveni=2024/P/0472",
+    "metadata": {
+        "model_name": "gpt-3.5-turbo",
+        "start_time": "2024-05-18T17:26:10Z",
+        "total_time": 1.604440689086914,
+        "prompt_tokens": 1850,
+        "completion_tokens": 67,
+        "total_tokens": 1917,
+        "total_cost": 0.002909
+    }
+}

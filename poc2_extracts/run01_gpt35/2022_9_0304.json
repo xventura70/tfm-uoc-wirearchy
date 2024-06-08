@@ -1,0 +1,47 @@
+{
+    "title": "Conveni entre l’Agència de l’Habitatge de Catalunya, el Departament d’Economia i Hisenda, Avalis de Catalunya, SGR, l’Institut Català de Finances i diverses entitats financeres",
+    "date": "2022-02-18",
+    "people": [
+        {
+            "name": "Jaume Giró i Ribas",
+            "organization": "Departament d’Economia i Hisenda",
+            "role": null,
+            "document": null
+        },
+        {
+            "name": "Violant Cervera i Gòdia",
+            "organization": "Departament de Drets Socials",
+            "role": null,
+            "document": null
+        },
+        {
+            "name": "Jaume Fornt i Paradell",
+            "organization": "Agència de l’Habitatge de Catalunya",
+            "role": null,
+            "document": null
+        },
+        {
+            "name": "Jordi Òliva i Ritort",
+            "organization": "Institut Català de Finances",
+            "role": null,
+            "document": null
+        },
+        {
+            "name": "Josep Lores i García",
+            "organization": "Avalis de Catalunya, SGR",
+            "role": null,
+            "document": null
+        }
+    ],
+    "code": "2022/9/0304",
+    "url": "https://registredeconvenis.gencat.cat/drep_rccc/public/Convenis.do?accion=DownloadDocumentsConveni&numFila=0&numConveni=2022/P/0126",
+    "metadata": {
+        "model_name": "gpt-3.5-turbo",
+        "start_time": "2024-05-18T17:25:14Z",
+        "total_time": 4.396982908248901,
+        "prompt_tokens": 1987,
+        "completion_tokens": 192,
+        "total_tokens": 2179,
+        "total_cost": 0.0033645000000000003
+    }
+}

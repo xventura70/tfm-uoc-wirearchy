@@ -1,0 +1,23 @@
+{
+    "title": "Adhesió al conveni en matèria de finançament destinat als ajuts de l’Agència de l’Habitatge de Catalunya",
+    "date": "2024-03-13",
+    "people": [
+        {
+            "name": "Ignacio Torre",
+            "organization": "Ibercaja Banc, SA",
+            "role": "Director de Màrqueting i Estratègia Digital",
+            "document": "Escriptura atorgada davant el notari en data 15 de març de 2017, número del seu protocol 589, inscrita al Registre Mercantil de Saragossa en data 28 de març de 2017, en el volum 4.176, foli 222, full Z-52.186, inscripció 1.225a"
+        }
+    ],
+    "code": "2024/8/0052",
+    "url": "https://registredeconvenis.gencat.cat/drep_rccc/public/Convenis.do?accion=DownloadDocumentsConveni&numFila=0&numConveni=2024/P/0475",
+    "metadata": {
+        "model_name": "gpt-3.5-turbo",
+        "start_time": "2024-05-18T17:26:18Z",
+        "total_time": 2.949831247329712,
+        "prompt_tokens": 1826,
+        "completion_tokens": 173,
+        "total_tokens": 1999,
+        "total_cost": 0.003085
+    }
+}

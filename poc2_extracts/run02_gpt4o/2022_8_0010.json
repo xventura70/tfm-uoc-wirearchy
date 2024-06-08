@@ -1,0 +1,29 @@
+{
+    "title": "Document d’adhesió al Conveni en matèria de finançament destinat als ajuts de l’Agència de l’Habitatge de Catalunya",
+    "date": "2022-02-18",
+    "people": [
+        {
+            "name": "José Antonio Aguilera Núñez",
+            "organization": "DEUTSCHE BANK, SAE",
+            "role": "apoderat mancomunat",
+            "document": null
+        },
+        {
+            "name": "JORGE MATEO SAENZ DE MIERA",
+            "organization": null,
+            "role": null,
+            "document": null
+        }
+    ],
+    "code": "2022/8/0010",
+    "url": "https://registredeconvenis.gencat.cat/drep_rccc/public/Convenis.do?accion=DownloadDocumentsConveni&numFila=0&numConveni=2022/P/0133",
+    "metadata": {
+        "model_name": "gpt-4o",
+        "start_time": "2024-05-18T17:42:25Z",
+        "total_time": 2.189556837081909,
+        "prompt_tokens": 1641,
+        "completion_tokens": 111,
+        "total_tokens": 1752,
+        "total_cost": 0.0
+    }
+}

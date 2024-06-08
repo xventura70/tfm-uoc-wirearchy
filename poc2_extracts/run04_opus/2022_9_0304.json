@@ -1,0 +1,43 @@
+{
+    "title": "null",
+    "date": "null",
+    "people": [
+        {
+            "name": "Jaume Giró i Ribas",
+            "organization": "Departament d'Economia i Hisenda",
+            "role": "conseller",
+            "document": null
+        },
+        {
+            "name": "Violant Cervera i Gòdia",
+            "organization": "Departament de Drets Socials",
+            "role": "consellera",
+            "document": null
+        },
+        {
+            "name": "Jaume Fornt i Paradell",
+            "organization": "Agència de l'Habitatge de Catalunya",
+            "role": "director",
+            "document": null
+        },
+        {
+            "name": "Jordi Òliva i Ritort",
+            "organization": "Institut Català de Finances (ICF)",
+            "role": "conseller delegat",
+            "document": null
+        },
+        {
+            "name": "Josep Lores i García",
+            "organization": "Avalis de Catalunya, SGR (Avalis)",
+            "role": "conseller delegat",
+            "document": null
+        }
+    ],
+    "code": "2022/9/0304",
+    "url": "https://registredeconvenis.gencat.cat/drep_rccc/public/Convenis.do?accion=DownloadDocumentsConveni&numFila=0&numConveni=2022/P/0126",
+    "metadata": {
+        "model_name": "claude-3-opus",
+        "start_time": "2024-05-18T18:06:27Z",
+        "total_time": 22.107941150665283
+    }
+}

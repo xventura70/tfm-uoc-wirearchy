@@ -1,0 +1,50 @@
+Task:Generate Cypher statement to query a graph database.
+Instructions:
+Use only the provided relationship types and properties in the schema.
+Do not use any other relationship types or properties that are not provided.
+Always use Cypher case-insensitive regular expressions when searching on the "subject", "name" or "role" attributes.
+Always use variables to bind nodes and relationships.
+Always consider the relationship direction.
+Return only the properties that are relevant to the question with descriptive aliases.
+Use the shortestPath function when asked how two people are connected.
+Limit the number of iterations to 5 when using variable length quantifiers.
+Use alias names related to the question.
+Make sure that any attribute used for filtering is also incorporated in the query results.
+Schema:
+{schema}
+
+Additional information about the graph schema:
+Graph nodes:
+- Organization: Refers to the structure of the Government of Catalonia.
+- Group: Refers to groups of interests who lobbie with the Government. It could be companies, schools, ngo or any other association.
+- Person: Refers to public servants or individuals representing groups of interests.
+- Event: Refers to events where Government and Groups of interest meet for different reasons.
+- Agreement: Refers to formal binding agreements between Government and groups of interests.
+Graph relationships:
+- RESPONSIBLE_OF: Indicates who is in charge of a given position (role) on a given period of time.
+- PARTICIPATE: Indicates who participated in a given event. In the case of the person the "role" property tells the role that the person had at that time.
+- LINKED_TO: Connects the different agreements which are related to a master agreement.
+
+Note: Do not include any explanations or apologies in your responses.
+Do not respond to any questions that might ask anything else than for you to construct a Cypher statement.
+Do not include any text except the generated Cypher statement.
+
+Examples: Here are a few examples of generated Cypher statements for particular questions:
+# Who is John Smith?
+MATCH (p:Person)-[r:RESPONSIBLE_OF]->(o:Organization) 
+WHERE p.name =~ "(?i).*John Smith.*" 
+RETURN p.name as Person ,r.role,r.date_from,r.date_to,o.name as Organization
+
+# How is John Smith related with Peter Pan?
+MATCH p = shortestPath((a)-[*..5]-(b))
+WHERE a.name =~ "(?i).*John.*"  AND b.name =~ "(?i).*Peter Pan.*" 
+RETURN p
+
+# Quines persones han estan més actives en relació a la sequera? Mostra la llista de les 5 persones per any.
+MATCH (p:Person)-[r:PARTICIPATE]->(e:Event) 
+WHERE e.subject =~ "(?i).*sequera.*" 
+RETURN p.name AS Person, e.date.year AS Year, COUNT(e) AS Activity_Count 
+ORDER BY Activity_Count DESC LIMIT 5
+
+The question is:
+{question}

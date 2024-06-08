@@ -1,0 +1,23 @@
+{
+    "title": "Document d’adhesió al conveni en matèria de finançament destinat als ajuts de l’Agència de l’Habitatge de Catalunya",
+    "date": "2024-02-20",
+    "people": [
+        {
+            "name": "Joan Cavallé Miranda",
+            "organization": "CAIXA DE CRÈDIT DELS ENGINYERS-CAJA DE CRÉDITO DE LOS INGENIEROS, S.COOP. DE CRÈDIT",
+            "role": "Director General",
+            "document": "escriptura atorgada davant el notari, en data 20 de gener de 2006, número del seu protocol 96, i inscrita al Registre Mercantil de Barcelona, en data 7 de març de 2006, en el volum 21.606, foli 161, full B-25.121, inscripció 177a"
+        }
+    ],
+    "code": "2024/8/0050",
+    "url": "https://registredeconvenis.gencat.cat/drep_rccc/public/Convenis.do?accion=DownloadDocumentsConveni&numFila=0&numConveni=2024/P/0473",
+    "metadata": {
+        "model_name": "gpt-4o",
+        "start_time": "2024-05-18T17:43:07Z",
+        "total_time": 3.4815547466278076,
+        "prompt_tokens": 1636,
+        "completion_tokens": 183,
+        "total_tokens": 1819,
+        "total_cost": 0.0
+    }
+}

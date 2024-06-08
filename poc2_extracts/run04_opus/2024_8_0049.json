@@ -1,0 +1,19 @@
+{
+    "title": "null",
+    "date": "2024-02-21",
+    "people": [
+        {
+            "name": "José Raúl Pérez González de Uriarte",
+            "organization": "Banco Bilbao Vizcaya Argentaria, SA",
+            "role": null,
+            "document": null
+        }
+    ],
+    "code": "2024/8/0049",
+    "url": "https://registredeconvenis.gencat.cat/drep_rccc/public/Convenis.do?accion=DownloadDocumentsConveni&numFila=0&numConveni=2024/P/0472",
+    "metadata": {
+        "model_name": "claude-3-opus",
+        "start_time": "2024-05-18T18:11:17Z",
+        "total_time": 17.74326515197754
+    }
+}

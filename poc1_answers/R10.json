@@ -1,0 +1,179 @@
+{
+    "run_id": "R10",
+    "comment": "test Q018:Q020 AFTER POC2 using template 2",
+    "start_time": "2024-05-20T17:40:15Z",
+    "end_time": "2024-05-20T17:42:25Z",
+    "total_time": 130.55578184127808,
+    "num_questions": 3,
+    "configuration": {
+        "id": "OPUS_P2",
+        "description": "claude-3-opus complex prompt 2",
+        "llm": "claude-3-opus",
+        "cypher_prompt_template": "prompt_template_2",
+        "requests_per_minute": 2
+    },
+    "questions": [
+        {
+            "question": {
+                "id": "Q018",
+                "question": "Qu\u00e8 saps del conveni 2022/9/0304?"
+            },
+            "answer": {
+                "query": "Qu\u00e8 saps del conveni 2022/9/0304?",
+                "result": "El conveni 2022/9/0304 \u00e9s un acord entre l'Ag\u00e8ncia de l'Habitatge de Catalunya, el Departament d'Economia i Hisenda, Avalis de Catalunya SGR, l'Institut Catal\u00e0 de Finances i diverses entitats financeres. L'objectiu del conveni \u00e9s finan\u00e7ar a comunitats de propietaris i persones f\u00edsiques i jur\u00eddiques privades els programes d'ajudes en mat\u00e8ria de rehabilitaci\u00f3 residencial del Pla de recuperaci\u00f3, transformaci\u00f3 i resili\u00e8ncia, en el marc dels fons Next Generation EU. El conveni est\u00e0 relacionat amb els fons MRR i Next Generation EU. Va ser signat el 18 de febrer de 2022 i t\u00e9 una validesa fins al 18 de febrer de 2026.",
+                "intermediate_steps": [
+                    {
+                        "query": "MATCH (a:Agreement) \nWHERE a.code = \"2022/9/0304\"\nRETURN a.code AS Agreement_Code, a.title AS Agreement_Title, a.subject AS Agreement_Subject, a.signees_gencat AS Signees_Government, a.signees_other AS Signees_Other, a.signature_date AS Signature_Date, a.validity_date AS Validity_Date"
+                    },
+                    {
+                        "context": [
+                            {
+                                "Agreement_Code": "2022/9/0304",
+                                "Agreement_Title": "Conveni entre l'Ag\u00e8ncia de l'Habitatge de Catalunya, el Departament d'Economia i Hisenda, Avalis de Catalunya, SGR, l'Institut Catal\u00e0 de Finances i diverses entitats financeres, per al finan\u00e7ament a comunitats de propietaris i persones f\u00edsiques i jur\u00eddiques privades, per als programes d'ajudes en mat\u00e8ria de rehabilitaci\u00f3 residencial del Pla de recuperaci\u00f3, transformaci\u00f3 i resili\u00e8ncia, finan\u00e7at en el marc dels fons Next Generation EU.",
+                                "Agreement_Subject": "Fons MRR i Next Generation EU",
+                                "Signees_Government": "Avalis de Catalunya SGR; Ag\u00e8ncia de l'Habitatge de Catalunya (AHC); Departament d'Economia i Hisenda ; Departament de Drets Socials ; Institut Catal\u00e0 de Finances (ICF)",
+                                "Signees_Other": null,
+                                "Signature_Date": {
+                                    "_Date__ordinal": 738204,
+                                    "_Date__year": 2022,
+                                    "_Date__month": 2,
+                                    "_Date__day": 18
+                                },
+                                "Validity_Date": {
+                                    "_Date__ordinal": 739665,
+                                    "_Date__year": 2026,
+                                    "_Date__month": 2,
+                                    "_Date__day": 18
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            "metadata": {
+                "start_time": "2024-05-20T17:40:15Z",
+                "end_time": "2024-05-20T17:40:29Z",
+                "query_time": 14.719038963317871
+            }
+        },
+        {
+            "question": {
+                "id": "Q019",
+                "question": "Qui ha signat el conveni 2022/9/0304? Inclou tots els convenis relacionats. Llista les entitats i el nom de la persona i el seu c\u00e0rrec."
+            },
+            "answer": {
+                "query": "Qui ha signat el conveni 2022/9/0304? Inclou tots els convenis relacionats. Llista les entitats i el nom de la persona i el seu c\u00e0rrec.",
+                "result": "Segons la informaci\u00f3 proporcionada, el conveni 2022/9/0304 \"Conveni entre l'Ag\u00e8ncia de l'Habitatge de Catalunya, el Departament d'Economia i Hisenda, Avalis de Catalunya, SGR, l'Institut Catal\u00e0 de Finances i diverses entitats financeres, per al finan\u00e7ament a comunitats de propietaris i persones f\u00edsiques i jur\u00eddiques privades, per als programes d'ajudes en mat\u00e8ria de rehabilitaci\u00f3 residencial del Pla de recuperaci\u00f3, transformaci\u00f3 i resili\u00e8ncia, finan\u00e7at en el marc dels fons Next Generation EU.\" ha estat signat per:\n\n- Jaume Fornt Paradell, director de l'Institut Catal\u00e0 de Finances\n\nAquest conveni est\u00e0 relacionat amb els seg\u00fcents convenis, que tamb\u00e9 han estat signats per Jaume Fornt Paradell com a director de l'Institut Catal\u00e0 de Finances:\n\n- 2022/8/0007\n- 2022/8/0009 \n- 2022/8/0012\n- 2022/8/0013\n- 2024/8/0049\n- 2024/8/0050\n- 2024/8/0055\n- 2024/8/0056",
+                "intermediate_steps": [
+                    {
+                        "query": "MATCH (p:Person)-[r:SIGNED]->(a:Agreement)<-[:SIGNED]-(o:Organization)\nWHERE a.code =~ \"(?i).*2022/9/0304.*\"\nOPTIONAL MATCH (a)-[:LINKED_TO*..5]-(linked_agreement:Agreement)\nRETURN a.code AS Agreement_Code, a.title AS Agreement_Title, o.name AS Organization, p.name AS Person, r.role AS Role, linked_agreement.code AS Linked_Agreement_Code"
+                    },
+                    {
+                        "context": [
+                            {
+                                "Agreement_Code": "2022/9/0304",
+                                "Agreement_Title": "Conveni entre l'Ag\u00e8ncia de l'Habitatge de Catalunya, el Departament d'Economia i Hisenda, Avalis de Catalunya, SGR, l'Institut Catal\u00e0 de Finances i diverses entitats financeres, per al finan\u00e7ament a comunitats de propietaris i persones f\u00edsiques i jur\u00eddiques privades, per als programes d'ajudes en mat\u00e8ria de rehabilitaci\u00f3 residencial del Pla de recuperaci\u00f3, transformaci\u00f3 i resili\u00e8ncia, finan\u00e7at en el marc dels fons Next Generation EU.",
+                                "Organization": "Institut Catal\u00e0 de Finances",
+                                "Person": "Jaume Fornt Paradell",
+                                "Role": "director",
+                                "Linked_Agreement_Code": "2022/8/0012"
+                            },
+                            {
+                                "Agreement_Code": "2022/9/0304",
+                                "Agreement_Title": "Conveni entre l'Ag\u00e8ncia de l'Habitatge de Catalunya, el Departament d'Economia i Hisenda, Avalis de Catalunya, SGR, l'Institut Catal\u00e0 de Finances i diverses entitats financeres, per al finan\u00e7ament a comunitats de propietaris i persones f\u00edsiques i jur\u00eddiques privades, per als programes d'ajudes en mat\u00e8ria de rehabilitaci\u00f3 residencial del Pla de recuperaci\u00f3, transformaci\u00f3 i resili\u00e8ncia, finan\u00e7at en el marc dels fons Next Generation EU.",
+                                "Organization": "Institut Catal\u00e0 de Finances",
+                                "Person": "Jaume Fornt Paradell",
+                                "Role": "director",
+                                "Linked_Agreement_Code": "2024/8/0055"
+                            },
+                            {
+                                "Agreement_Code": "2022/9/0304",
+                                "Agreement_Title": "Conveni entre l'Ag\u00e8ncia de l'Habitatge de Catalunya, el Departament d'Economia i Hisenda, Avalis de Catalunya, SGR, l'Institut Catal\u00e0 de Finances i diverses entitats financeres, per al finan\u00e7ament a comunitats de propietaris i persones f\u00edsiques i jur\u00eddiques privades, per als programes d'ajudes en mat\u00e8ria de rehabilitaci\u00f3 residencial del Pla de recuperaci\u00f3, transformaci\u00f3 i resili\u00e8ncia, finan\u00e7at en el marc dels fons Next Generation EU.",
+                                "Organization": "Institut Catal\u00e0 de Finances",
+                                "Person": "Jaume Fornt Paradell",
+                                "Role": "director",
+                                "Linked_Agreement_Code": "2022/8/0013"
+                            },
+                            {
+                                "Agreement_Code": "2022/9/0304",
+                                "Agreement_Title": "Conveni entre l'Ag\u00e8ncia de l'Habitatge de Catalunya, el Departament d'Economia i Hisenda, Avalis de Catalunya, SGR, l'Institut Catal\u00e0 de Finances i diverses entitats financeres, per al finan\u00e7ament a comunitats de propietaris i persones f\u00edsiques i jur\u00eddiques privades, per als programes d'ajudes en mat\u00e8ria de rehabilitaci\u00f3 residencial del Pla de recuperaci\u00f3, transformaci\u00f3 i resili\u00e8ncia, finan\u00e7at en el marc dels fons Next Generation EU.",
+                                "Organization": "Institut Catal\u00e0 de Finances",
+                                "Person": "Jaume Fornt Paradell",
+                                "Role": "director",
+                                "Linked_Agreement_Code": "2022/9/0304"
+                            },
+                            {
+                                "Agreement_Code": "2022/9/0304",
+                                "Agreement_Title": "Conveni entre l'Ag\u00e8ncia de l'Habitatge de Catalunya, el Departament d'Economia i Hisenda, Avalis de Catalunya, SGR, l'Institut Catal\u00e0 de Finances i diverses entitats financeres, per al finan\u00e7ament a comunitats de propietaris i persones f\u00edsiques i jur\u00eddiques privades, per als programes d'ajudes en mat\u00e8ria de rehabilitaci\u00f3 residencial del Pla de recuperaci\u00f3, transformaci\u00f3 i resili\u00e8ncia, finan\u00e7at en el marc dels fons Next Generation EU.",
+                                "Organization": "Institut Catal\u00e0 de Finances",
+                                "Person": "Jaume Fornt Paradell",
+                                "Role": "director",
+                                "Linked_Agreement_Code": "2022/8/0012"
+                            },
+                            {
+                                "Agreement_Code": "2022/9/0304",
+                                "Agreement_Title": "Conveni entre l'Ag\u00e8ncia de l'Habitatge de Catalunya, el Departament d'Economia i Hisenda, Avalis de Catalunya, SGR, l'Institut Catal\u00e0 de Finances i diverses entitats financeres, per al finan\u00e7ament a comunitats de propietaris i persones f\u00edsiques i jur\u00eddiques privades, per als programes d'ajudes en mat\u00e8ria de rehabilitaci\u00f3 residencial del Pla de recuperaci\u00f3, transformaci\u00f3 i resili\u00e8ncia, finan\u00e7at en el marc dels fons Next Generation EU.",
+                                "Organization": "Institut Catal\u00e0 de Finances",
+                                "Person": "Jaume Fornt Paradell",
+                                "Role": "director",
+                                "Linked_Agreement_Code": "2022/8/0007"
+                            },
+                            {
+                                "Agreement_Code": "2022/9/0304",
+                                "Agreement_Title": "Conveni entre l'Ag\u00e8ncia de l'Habitatge de Catalunya, el Departament d'Economia i Hisenda, Avalis de Catalunya, SGR, l'Institut Catal\u00e0 de Finances i diverses entitats financeres, per al finan\u00e7ament a comunitats de propietaris i persones f\u00edsiques i jur\u00eddiques privades, per als programes d'ajudes en mat\u00e8ria de rehabilitaci\u00f3 residencial del Pla de recuperaci\u00f3, transformaci\u00f3 i resili\u00e8ncia, finan\u00e7at en el marc dels fons Next Generation EU.",
+                                "Organization": "Institut Catal\u00e0 de Finances",
+                                "Person": "Jaume Fornt Paradell",
+                                "Role": "director",
+                                "Linked_Agreement_Code": "2024/8/0056"
+                            },
+                            {
+                                "Agreement_Code": "2022/9/0304",
+                                "Agreement_Title": "Conveni entre l'Ag\u00e8ncia de l'Habitatge de Catalunya, el Departament d'Economia i Hisenda, Avalis de Catalunya, SGR, l'Institut Catal\u00e0 de Finances i diverses entitats financeres, per al finan\u00e7ament a comunitats de propietaris i persones f\u00edsiques i jur\u00eddiques privades, per als programes d'ajudes en mat\u00e8ria de rehabilitaci\u00f3 residencial del Pla de recuperaci\u00f3, transformaci\u00f3 i resili\u00e8ncia, finan\u00e7at en el marc dels fons Next Generation EU.",
+                                "Organization": "Institut Catal\u00e0 de Finances",
+                                "Person": "Jaume Fornt Paradell",
+                                "Role": "director",
+                                "Linked_Agreement_Code": "2024/8/0049"
+                            },
+                            {
+                                "Agreement_Code": "2022/9/0304",
+                                "Agreement_Title": "Conveni entre l'Ag\u00e8ncia de l'Habitatge de Catalunya, el Departament d'Economia i Hisenda, Avalis de Catalunya, SGR, l'Institut Catal\u00e0 de Finances i diverses entitats financeres, per al finan\u00e7ament a comunitats de propietaris i persones f\u00edsiques i jur\u00eddiques privades, per als programes d'ajudes en mat\u00e8ria de rehabilitaci\u00f3 residencial del Pla de recuperaci\u00f3, transformaci\u00f3 i resili\u00e8ncia, finan\u00e7at en el marc dels fons Next Generation EU.",
+                                "Organization": "Institut Catal\u00e0 de Finances",
+                                "Person": "Jaume Fornt Paradell",
+                                "Role": "director",
+                                "Linked_Agreement_Code": "2024/8/0050"
+                            },
+                            {
+                                "Agreement_Code": "2022/9/0304",
+                                "Agreement_Title": "Conveni entre l'Ag\u00e8ncia de l'Habitatge de Catalunya, el Departament d'Economia i Hisenda, Avalis de Catalunya, SGR, l'Institut Catal\u00e0 de Finances i diverses entitats financeres, per al finan\u00e7ament a comunitats de propietaris i persones f\u00edsiques i jur\u00eddiques privades, per als programes d'ajudes en mat\u00e8ria de rehabilitaci\u00f3 residencial del Pla de recuperaci\u00f3, transformaci\u00f3 i resili\u00e8ncia, finan\u00e7at en el marc dels fons Next Generation EU.",
+                                "Organization": "Institut Catal\u00e0 de Finances",
+                                "Person": "Jaume Fornt Paradell",
+                                "Role": "director",
+                                "Linked_Agreement_Code": "2022/8/0009"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "metadata": {
+                "start_time": "2024-05-20T17:40:45Z",
+                "end_time": "2024-05-20T17:41:08Z",
+                "query_time": 23.495752096176147
+            }
+        },
+        {
+            "question": {
+                "id": "Q020",
+                "question": "Llista totes les persones, organitzacions i grups que han signat el conveni 2022/9/0304. Inclou tots els convenis relacionats amb el 2022/9/0304."
+            },
+            "answer": {
+                "query": "Llista totes les persones, organitzacions i grups que han signat el conveni 2022/9/0304. Inclou tots els convenis relacionats amb el 2022/9/0304.",
+                "result": "{code: Neo.ClientError.Transaction.TransactionTimedOutClientConfiguration} {message: The transaction has been terminated. Retry your operation in a new transaction, and you should see a successful result. The transaction has not completed within the timeout specified at its start by the client. You may want to retry with a longer timeout. }"
+            },
+            "metadata": {
+                "start_time": "2024-05-20T17:41:15Z",
+                "end_time": "2024-05-20T17:42:25Z",
+                "query_time": 70.54892706871033
+            }
+        }
+    ]
+}

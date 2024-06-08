@@ -1,0 +1,906 @@
+{
+    "run_id": "R03",
+    "comment": "Complete run",
+    "start_time": "2024-05-19T19:38:46Z",
+    "end_time": "2024-05-19T19:39:41Z",
+    "total_time": 54.77328395843506,
+    "num_questions": 20,
+    "configuration": {
+        "id": "GPT35_P1",
+        "description": "gpt-3.5-turbo complex prompt 1",
+        "llm": "gpt-3.5-turbo",
+        "cypher_prompt_template": "prompt_template_1"
+    },
+    "questions": [
+        {
+            "question": {
+                "id": "Q001",
+                "question": "Qui \u00e9s el president de la Generalitat de Catalunya?"
+            },
+            "answer": {
+                "query": "Qui \u00e9s el president de la Generalitat de Catalunya?",
+                "result": "No s\u00e9 la resposta.",
+                "intermediate_steps": [
+                    {
+                        "query": "MATCH (p:Person)-[r:RESPONSIBLE_OF {role: \"president\"}]->(o:Organization {name: \"Generalitat de Catalunya\"})\nRETURN p.name AS president, r.role, o.name AS organization"
+                    },
+                    {
+                        "context": []
+                    }
+                ]
+            },
+            "metadata": {
+                "prompt_tokens": 725,
+                "completion_tokens": 53,
+                "total_tokens": 778,
+                "total_cost": 0.0011935000000000001,
+                "start_time": "2024-05-19T19:38:46Z",
+                "end_time": "2024-05-19T19:38:48Z",
+                "query_time": 1.6770129203796387
+            }
+        },
+        {
+            "question": {
+                "id": "Q002",
+                "question": "Qui t\u00e9 actualment el c\u00e0rrec de 'President de la Generalitat de Catalunya'?"
+            },
+            "answer": {
+                "query": "Qui t\u00e9 actualment el c\u00e0rrec de 'President de la Generalitat de Catalunya'?",
+                "result": "Pere Aragon\u00e8s Garcia \u00e9s actualment el President de la Generalitat de Catalunya.",
+                "intermediate_steps": [
+                    {
+                        "query": "MATCH (p:Person)-[r:RESPONSIBLE_OF {role: 'President de la Generalitat de Catalunya'}]->(o:Organization)\nRETURN p.name, r.role, o.name as current_president"
+                    },
+                    {
+                        "context": [
+                            {
+                                "p.name": "Pere Aragon\u00e8s Garcia",
+                                "r.role": "President de la Generalitat de Catalunya",
+                                "current_president": "Generalitat de Catalunya"
+                            },
+                            {
+                                "p.name": "Pere Aragon\u00e8s Garcia",
+                                "r.role": "President de la Generalitat de Catalunya",
+                                "current_president": "Departament de la Presid\u00e8ncia"
+                            },
+                            {
+                                "p.name": "Pere Aragon\u00e8s Garcia",
+                                "r.role": "President de la Generalitat de Catalunya",
+                                "current_president": "President de la Generalitat"
+                            },
+                            {
+                                "p.name": "Joaquim Torra Pla",
+                                "r.role": "President de la Generalitat de Catalunya",
+                                "current_president": "Departament de la Presid\u00e8ncia"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "metadata": {
+                "prompt_tokens": 902,
+                "completion_tokens": 64,
+                "total_tokens": 966,
+                "total_cost": 0.0014810000000000001,
+                "start_time": "2024-05-19T19:38:48Z",
+                "end_time": "2024-05-19T19:38:50Z",
+                "query_time": 1.9951937198638916
+            }
+        },
+        {
+            "question": {
+                "id": "Q003",
+                "question": "Qui \u00e9s el responsable de Direcci\u00f3 General de Turisme?"
+            },
+            "answer": {
+                "query": "Qui \u00e9s el responsable de Direcci\u00f3 General de Turisme?",
+                "result": "Marta Dom\u00e8nech Tom\u00e0s i Octavi Bono Gispert s\u00f3n els responsables de la Direcci\u00f3 General de Turisme.",
+                "intermediate_steps": [
+                    {
+                        "query": "MATCH (p:Person)-[r:RESPONSIBLE_OF]->(o:Organization)\nWHERE o.name CONTAINS \"Direcci\u00f3 General de Turisme\"\nRETURN p.name AS responsable, r.role AS rol, o.name AS organitzaci\u00f3"
+                    },
+                    {
+                        "context": [
+                            {
+                                "responsable": "Marta Dom\u00e8nech Tom\u00e0s",
+                                "rol": "directora general de Turisme",
+                                "organitzaci\u00f3": "Direcci\u00f3 General de Turisme"
+                            },
+                            {
+                                "responsable": "Octavi Bono Gispert",
+                                "rol": "director general de Turisme",
+                                "organitzaci\u00f3": "Direcci\u00f3 General de Turisme"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "metadata": {
+                "prompt_tokens": 805,
+                "completion_tokens": 82,
+                "total_tokens": 887,
+                "total_cost": 0.0013715,
+                "start_time": "2024-05-19T19:38:50Z",
+                "end_time": "2024-05-19T19:38:52Z",
+                "query_time": 2.420196771621704
+            }
+        },
+        {
+            "question": {
+                "id": "Q004",
+                "question": "Quina \u00e9s la estructura del Parlament de Catalunya?"
+            },
+            "answer": {
+                "query": "Quina \u00e9s la estructura del Parlament de Catalunya?",
+                "result": "La estructura del Parlament de Catalunya inclou Anna Erra Sol\u00e0 com a presidenta, M. Eva Beas Cruz com a secret\u00e0ria de la Comissi\u00f3, Salvador Esteve Balagu\u00e9 com a cap del Gabinet de Presid\u00e8ncia, Laura Borr\u00e0s Castanyer com a presidenta de la Mesa, i Xavier Muro Bas com a secretari general.",
+                "intermediate_steps": [
+                    {
+                        "query": "MATCH (p:Person)-[r:RESPONSIBLE_OF]->(o:Organization)\nWHERE o.name CONTAINS \"Parlament de Catalunya\"\nRETURN p.name, r.role, o.name"
+                    },
+                    {
+                        "context": [
+                            {
+                                "p.name": "Anna Erra Sol\u00e0",
+                                "r.role": "presidenta del Parlament de Catalunya",
+                                "o.name": "Parlament de Catalunya"
+                            },
+                            {
+                                "p.name": "M. Eva Beas Cruz",
+                                "r.role": "secret\u00e0ria de la Comissi\u00f3",
+                                "o.name": "Comissi\u00f3 mixta de seguiment del desplegament de la Llei 39/2006, de 14 de desembre, de promoci\u00f3 de l'autonomia personal i atenci\u00f3 a les persones en situaci\u00f3 de depend\u00e8ncia, derivada de la moci\u00f3 45/VIII del Parlament de Catalunya"
+                            },
+                            {
+                                "p.name": "Salvador Esteve Balagu\u00e9",
+                                "r.role": "cap del Gabinet de Presid\u00e8ncia",
+                                "o.name": "Gabinet de Presid\u00e8ncia (Parlament de Catalunya)"
+                            },
+                            {
+                                "p.name": "Laura Borr\u00e0s Castanyer",
+                                "r.role": "presidenta de la Mesa del Parlament de Catalunya",
+                                "o.name": "Mesa del Parlament de Catalunya"
+                            },
+                            {
+                                "p.name": "Xavier Muro Bas",
+                                "r.role": "secretari general del Parlament de Catalunya",
+                                "o.name": "Secretaria General (Parlament de Catalunya)"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "metadata": {
+                "prompt_tokens": 1010,
+                "completion_tokens": 124,
+                "total_tokens": 1134,
+                "total_cost": 0.0017630000000000002,
+                "start_time": "2024-05-19T19:38:52Z",
+                "end_time": "2024-05-19T19:38:55Z",
+                "query_time": 2.7511978149414062
+            }
+        },
+        {
+            "question": {
+                "id": "Q005",
+                "question": "Quines reunions s'han celebrat amb el Grup Universitat Oberta de Catalunya?"
+            },
+            "answer": {
+                "query": "Quines reunions s'han celebrat amb el Grup Universitat Oberta de Catalunya?",
+                "result": "No s\u00e9 la resposta.",
+                "intermediate_steps": [
+                    {
+                        "query": "MATCH (g:Group {name: \"Grup Universitat Oberta de Catalunya\"})-[:PARTICIPATE]->(e:Event)\nRETURN e.subject, e.date"
+                    },
+                    {
+                        "context": []
+                    }
+                ]
+            },
+            "metadata": {
+                "prompt_tokens": 743,
+                "completion_tokens": 41,
+                "total_tokens": 784,
+                "total_cost": 0.0011965,
+                "start_time": "2024-05-19T19:38:55Z",
+                "end_time": "2024-05-19T19:38:56Z",
+                "query_time": 1.3173787593841553
+            }
+        },
+        {
+            "question": {
+                "id": "Q006",
+                "question": "Qui es va reunir amb el grup Universitat Oberta de Catalunya?"
+            },
+            "answer": {
+                "query": "Qui es va reunir amb el grup Universitat Oberta de Catalunya?",
+                "result": "No s\u00e9 la resposta.",
+                "intermediate_steps": [
+                    {
+                        "query": "MATCH (p:Person)-[r:PARTICIPATE]->(e:Event)-[:PARTICIPATE]->(g:Group)\nWHERE g.name CONTAINS \"Universitat Oberta de Catalunya\"\nRETURN p.name AS Person, e.subject AS Event, g.name AS Group"
+                    },
+                    {
+                        "context": []
+                    }
+                ]
+            },
+            "metadata": {
+                "prompt_tokens": 733,
+                "completion_tokens": 63,
+                "total_tokens": 796,
+                "total_cost": 0.0012255,
+                "start_time": "2024-05-19T19:38:56Z",
+                "end_time": "2024-05-19T19:38:58Z",
+                "query_time": 2.053628921508789
+            }
+        },
+        {
+            "question": {
+                "id": "Q007",
+                "question": "Qui \u00e9s Jaume Gir\u00f3 Ribas?"
+            },
+            "answer": {
+                "query": "Qui \u00e9s Jaume Gir\u00f3 Ribas?",
+                "result": "Jaume Gir\u00f3 Ribas \u00e9s conseller d'Economia i Hisenda al Departament d'Economia i Hisenda.",
+                "intermediate_steps": [
+                    {
+                        "query": "MATCH (p:Person)-[r:RESPONSIBLE_OF]->(o:Organization)\nWHERE p.name CONTAINS \"Jaume Gir\u00f3 Ribas\"\nRETURN p.name, r.role, o"
+                    },
+                    {
+                        "context": [
+                            {
+                                "p.name": "Jaume Gir\u00f3 Ribas",
+                                "r.role": "conseller d'Economia i Hisenda",
+                                "o": {
+                                    "code": "ECF",
+                                    "last_event_date": {
+                                        "_Date__ordinal": 738939,
+                                        "_Date__year": 2024,
+                                        "_Date__month": 2,
+                                        "_Date__day": 23
+                                    },
+                                    "name": "Departament d'Economia i Hisenda",
+                                    "id": 19772,
+                                    "pk": "departamentdeconomiaihisenda",
+                                    "first_event_date": {
+                                        "_Date__ordinal": 736208,
+                                        "_Date__year": 2016,
+                                        "_Date__month": 9,
+                                        "_Date__day": 1
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            "metadata": {
+                "prompt_tokens": 830,
+                "completion_tokens": 67,
+                "total_tokens": 897,
+                "total_cost": 0.001379,
+                "start_time": "2024-05-19T19:38:58Z",
+                "end_time": "2024-05-19T19:39:00Z",
+                "query_time": 2.105109691619873
+            }
+        },
+        {
+            "question": {
+                "id": "Q008",
+                "question": "Quan es va reunir en Tom\u00e0s Roy Catal\u00e0 amb el grup Universitat Oberta de Catalunya? I quin tema es va tractar?"
+            },
+            "answer": {
+                "query": "Quan es va reunir en Tom\u00e0s Roy Catal\u00e0 amb el grup Universitat Oberta de Catalunya? I quin tema es va tractar?",
+                "result": "En Tom\u00e0s Roy Catal\u00e0 es va reunir amb el grup Universitat Oberta de Catalunya el 28 de febrer de 2024 i es va tractar el tema \"TR - Participaci\u00f3 confer\u00e8ncia EAPC sobre \u201cLa governan\u00e7a en temps de crisi\u201d\".",
+                "intermediate_steps": [
+                    {
+                        "query": "MATCH (p:Person {name: \"Tom\u00e0s Roy Catal\u00e0\"})-[:RESPONSIBLE_OF]->(o:Organization)-[:PARTICIPATE]->(e:Event)<-[:PARTICIPATE]-(g:Group {name: \"Universitat Oberta de Catalunya\"})\nRETURN e.date AS meeting_date, e.subject AS meeting_subject"
+                    },
+                    {
+                        "context": [
+                            {
+                                "meeting_date": {
+                                    "_Date__ordinal": 738944,
+                                    "_Date__year": 2024,
+                                    "_Date__month": 2,
+                                    "_Date__day": -2
+                                },
+                                "meeting_subject": "TR - Participaci\u00f3 confer\u00e8ncia EAPC sobre \u201cLa governan\u00e7a en temps de crisi\u201d "
+                            }
+                        ]
+                    }
+                ]
+            },
+            "metadata": {
+                "prompt_tokens": 814,
+                "completion_tokens": 136,
+                "total_tokens": 950,
+                "total_cost": 0.001493,
+                "start_time": "2024-05-19T19:39:00Z",
+                "end_time": "2024-05-19T19:39:03Z",
+                "query_time": 2.8308491706848145
+            }
+        },
+        {
+            "question": {
+                "id": "Q009",
+                "question": "Amb qui s'ha reunit en Tom\u00e0s Roy Catal\u00e0?"
+            },
+            "answer": {
+                "query": "Amb qui s'ha reunit en Tom\u00e0s Roy Catal\u00e0?",
+                "result": "No s\u00e9 la resposta.",
+                "intermediate_steps": [
+                    {
+                        "query": "MATCH (p1:Person {name: \"Tom\u00e0s Roy Catal\u00e0\"})-[:PARTICIPATE]->(e:Event)<-[:PARTICIPATE]-(p2:Person)\nRETURN p2.name AS person_name, e.subject AS event_subject"
+                    },
+                    {
+                        "context": [
+                            {
+                                "person_name": "Pedro Lend\u00ednez Zaragoza",
+                                "event_subject": "Visita SOC Evolutio "
+                            },
+                            {
+                                "person_name": "Pedro Lend\u00ednez Zaragoza",
+                                "event_subject": "Jornada Ciberseguretat en Salut"
+                            },
+                            {
+                                "person_name": "Jaume Alemany Oliver",
+                                "event_subject": "Jornada Ciberseguretat en Salut"
+                            },
+                            {
+                                "person_name": "Jaume Roca Lafoz",
+                                "event_subject": "Jornada Ciberseguretat en Salut"
+                            },
+                            {
+                                "person_name": "Helena Rodr\u00edguez P\u00e9rez",
+                                "event_subject": "Jornada Ciberseguretat en Salut"
+                            },
+                            {
+                                "person_name": "Jaume Alemany Oliver",
+                                "event_subject": "MWC. Cisco"
+                            },
+                            {
+                                "person_name": "Pedro Lend\u00ednez Zaragoza",
+                                "event_subject": "MWC - Vodafone - Alejandro Carballo"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "metadata": {
+                "prompt_tokens": 931,
+                "completion_tokens": 59,
+                "total_tokens": 990,
+                "total_cost": 0.0015145000000000002,
+                "start_time": "2024-05-19T19:39:03Z",
+                "end_time": "2024-05-19T19:39:05Z",
+                "query_time": 1.98130464553833
+            }
+        },
+        {
+            "question": {
+                "id": "Q010",
+                "question": "Llista les 10 persones amb m\u00e9s carrecs"
+            },
+            "answer": {
+                "query": "Llista les 10 persones amb m\u00e9s carrecs",
+                "result": "Elisenda Guillaumes Cullell, persona titular del Departament d'Interior, Gemma Ubasart Gonz\u00e1lez, Antoni Segarra Barreto, Carmel M\u00f2dol Bresol\u00ed, Vacant, Meritxell Serret Aleu, Pere Aragon\u00e8s Garcia, Ester Capella Farr\u00e9, Meritxell Mas\u00f3 Carb\u00f3.",
+                "intermediate_steps": [
+                    {
+                        "query": "MATCH (p:Person)-[r:RESPONSIBLE_OF]->(o:Organization)\nWITH p, COUNT(r) AS num_roles\nRETURN p.name AS person_name, num_roles\nORDER BY num_roles DESC\nLIMIT 10"
+                    },
+                    {
+                        "context": [
+                            {
+                                "person_name": "Elisenda Guillaumes Cullell",
+                                "num_roles": 20
+                            },
+                            {
+                                "person_name": "persona titular del Departament d'Interior",
+                                "num_roles": 9
+                            },
+                            {
+                                "person_name": "Gemma Ubasart Gonz\u00e1lez",
+                                "num_roles": 7
+                            },
+                            {
+                                "person_name": "Antoni Segarra Barreto",
+                                "num_roles": 6
+                            },
+                            {
+                                "person_name": "Carmel M\u00f2dol Bresol\u00ed",
+                                "num_roles": 5
+                            },
+                            {
+                                "person_name": "Vacant",
+                                "num_roles": 5
+                            },
+                            {
+                                "person_name": "Meritxell Serret Aleu",
+                                "num_roles": 5
+                            },
+                            {
+                                "person_name": "Pere Aragon\u00e8s Garcia",
+                                "num_roles": 5
+                            },
+                            {
+                                "person_name": "Ester Capella Farr\u00e9",
+                                "num_roles": 5
+                            },
+                            {
+                                "person_name": "Meritxell Mas\u00f3 Carb\u00f3",
+                                "num_roles": 5
+                            }
+                        ]
+                    }
+                ]
+            },
+            "metadata": {
+                "prompt_tokens": 928,
+                "completion_tokens": 128,
+                "total_tokens": 1056,
+                "total_cost": 0.0016480000000000002,
+                "start_time": "2024-05-19T19:39:05Z",
+                "end_time": "2024-05-19T19:39:08Z",
+                "query_time": 3.1542747020721436
+            }
+        },
+        {
+            "question": {
+                "id": "Q011",
+                "question": "Parlam sobre Elisenda Guillaumes Cullell?",
+                "comment": "https://direcciopublica.transparencia.gencat.cat/personas/elisenda-guillaumes-cullell"
+            },
+            "answer": {
+                "query": "Parlam sobre Elisenda Guillaumes Cullell?",
+                "result": "No information provided.",
+                "intermediate_steps": [
+                    {
+                        "query": "MATCH (p1:Person)-[r:PARTICIPATE]->(e:Event)<-[r2:PARTICIPATE]-(p2:Person)\nWHERE p1.name CONTAINS \"Elisenda Guillaumes Cullell\" AND p2.name CONTAINS \"Elisenda Guillaumes Cullell\"\nRETURN p1.name AS person1, r.role AS role1, e.subject AS event_subject, e.date AS event_date, r2.role AS role2, p2.name AS person2"
+                    },
+                    {
+                        "context": []
+                    }
+                ]
+            },
+            "metadata": {
+                "prompt_tokens": 725,
+                "completion_tokens": 111,
+                "total_tokens": 836,
+                "total_cost": 0.0013095000000000001,
+                "start_time": "2024-05-19T19:39:08Z",
+                "end_time": "2024-05-19T19:39:11Z",
+                "query_time": 2.9787099361419678
+            }
+        },
+        {
+            "question": {
+                "id": "Q012",
+                "question": "Quina \u00e9s la relaci\u00f3 entre 'Miquel Salazar Canalda' i 'Joan Vintr\u00f3 Castells'? Descriu la relaci\u00f3 pas a pas."
+            },
+            "answer": {
+                "query": "Quina \u00e9s la relaci\u00f3 entre 'Miquel Salazar Canalda' i 'Joan Vintr\u00f3 Castells'? Descriu la relaci\u00f3 pas a pas.",
+                "result": "Miquel Salazar Canalda \u00e9s responsable de la Sindicatura de Comptes de Catalunya, que \u00e9s una entitat subordinada a la Generalitat de Catalunya, que a la vegada \u00e9s subordinada al Consell de Garanties Estatut\u00e0ries. Aquest \u00faltim \u00e9s responsable de Joan Vintr\u00f3 Castells.",
+                "intermediate_steps": [
+                    {
+                        "query": "MATCH p = shortestPath((a:Person)-[*..5]-(b:Person))\nWHERE a.name CONTAINS 'Miquel Salazar Canalda' AND b.name CONTAINS 'Joan Vintr\u00f3 Castells'\nRETURN p"
+                    },
+                    {
+                        "context": [
+                            {
+                                "p": [
+                                    {
+                                        "name": "Miquel Salazar Canalda",
+                                        "pk": "miquelsalazarcanalda"
+                                    },
+                                    "RESPONSIBLE_OF",
+                                    {
+                                        "name": "Sindicatura de Comptes de Catalunya",
+                                        "id": 6611,
+                                        "pk": "PRE:sindicaturadecomptesdecatalunya"
+                                    },
+                                    "CHILD_OF",
+                                    {
+                                        "name": "Generalitat de Catalunya",
+                                        "id": 1,
+                                        "pk": "PRE:generalitatdecatalunya"
+                                    },
+                                    "CHILD_OF",
+                                    {
+                                        "name": "Consell de Garanties Estatut\u00e0ries",
+                                        "id": 6619,
+                                        "pk": "PRE:conselldegarantiesestatutaries"
+                                    },
+                                    "RESPONSIBLE_OF",
+                                    {
+                                        "name": "Joan Vintr\u00f3 Castells",
+                                        "pk": "joanvintrocastells"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "metadata": {
+                "prompt_tokens": 955,
+                "completion_tokens": 123,
+                "total_tokens": 1078,
+                "total_cost": 0.0016784999999999999,
+                "start_time": "2024-05-19T19:39:11Z",
+                "end_time": "2024-05-19T19:39:14Z",
+                "query_time": 2.9164819717407227
+            }
+        },
+        {
+            "question": {
+                "id": "Q013",
+                "question": "Quins grups s'han reunit per tractar sobre la sequera? Incloure el tema de la reuni\u00f3 i la data."
+            },
+            "answer": {
+                "query": "Quins grups s'han reunit per tractar sobre la sequera? Incloure el tema de la reuni\u00f3 i la data.",
+                "result": "Federacio de Cooperatives Agraries de Catalunya, Uni\u00f3 de Pagesos de Catalunya, Joves Agricultors i Ramaders de Catalunya-jarc, Consell Comarcal d'Osona, PIMEC, Sindicat UGT, CCOO, Girona Futbol Club, SAD, Cadagua, S.A., Jaume Prat s'han reunit per tractar sobre la sequera. Els temes de les reunions i les dates s\u00f3n: Taula sequera el 8 de mar\u00e7 de 2022, Reuni\u00f3 extraordin\u00e0ria alcaldes d'Osona abastament Osona Sud i sequera el 24 de juliol de 2022, Comissi\u00f3 de Seguiment del Consell de Di\u00e0leg Social per l'estat de sequera el 6 de febrer de 2024, Signatura del document de comprom\u00eds envers la sequera i partit FC Barcelona- Girona FC el 10 de desembre de 2023, Decret sequera, situaci\u00f3 dessalinitzadores el 10 de mar\u00e7 de 2023, Temes relacionats amb la sequera, fauna cineg\u00e8tica i explotacions ramaderes de bov\u00ed i porc\u00ed el 30 de mar\u00e7 de 2023.",
+                "intermediate_steps": [
+                    {
+                        "query": "MATCH (g:Group)-[p:PARTICIPATE]->(e:Event)\nWHERE e.subject CONTAINS \"sequera\"\nRETURN g.name AS group_name, e.subject AS meeting_subject, e.date AS meeting_date"
+                    },
+                    {
+                        "context": [
+                            {
+                                "group_name": "Federacio de Cooperatives Agraries de Catalunya",
+                                "meeting_subject": "Taula sequera",
+                                "meeting_date": {
+                                    "_Date__ordinal": 738222,
+                                    "_Date__year": 2022,
+                                    "_Date__month": 3,
+                                    "_Date__day": 8
+                                }
+                            },
+                            {
+                                "group_name": "Uni\u00f3 de Pagesos de Catalunya",
+                                "meeting_subject": "Taula sequera",
+                                "meeting_date": {
+                                    "_Date__ordinal": 738222,
+                                    "_Date__year": 2022,
+                                    "_Date__month": 3,
+                                    "_Date__day": 8
+                                }
+                            },
+                            {
+                                "group_name": "Joves Agricultors i Ramaders de Catalunya-jarc",
+                                "meeting_subject": "Taula sequera",
+                                "meeting_date": {
+                                    "_Date__ordinal": 738222,
+                                    "_Date__year": 2022,
+                                    "_Date__month": 3,
+                                    "_Date__day": 8
+                                }
+                            },
+                            {
+                                "group_name": "Consell Comarcal d'Osona",
+                                "meeting_subject": "Reuni\u00f3 extraordin\u00e0ria alcaldes d'Osona abastament Osona Sud i sequera",
+                                "meeting_date": {
+                                    "_Date__ordinal": 738360,
+                                    "_Date__year": 2022,
+                                    "_Date__month": 7,
+                                    "_Date__day": 24
+                                }
+                            },
+                            {
+                                "group_name": "PIMEC",
+                                "meeting_subject": "Comissi\u00f3 de Seguiment del Consell de Di\u00e0leg Social per l'estat de sequera",
+                                "meeting_date": {
+                                    "_Date__ordinal": 738922,
+                                    "_Date__year": 2024,
+                                    "_Date__month": 2,
+                                    "_Date__day": 6
+                                }
+                            },
+                            {
+                                "group_name": "Sindicat UGT",
+                                "meeting_subject": "Comissi\u00f3 de Seguiment del Consell de Di\u00e0leg Social per l'estat de sequera",
+                                "meeting_date": {
+                                    "_Date__ordinal": 738922,
+                                    "_Date__year": 2024,
+                                    "_Date__month": 2,
+                                    "_Date__day": 6
+                                }
+                            },
+                            {
+                                "group_name": "CCOO",
+                                "meeting_subject": "Comissi\u00f3 de Seguiment del Consell de Di\u00e0leg Social per l'estat de sequera",
+                                "meeting_date": {
+                                    "_Date__ordinal": 738922,
+                                    "_Date__year": 2024,
+                                    "_Date__month": 2,
+                                    "_Date__day": 6
+                                }
+                            },
+                            {
+                                "group_name": "Girona Futbol Club, SAD",
+                                "meeting_subject": "Signatura del document de comprom\u00eds envers la sequera i partit FC Barcelona- Girona FC",
+                                "meeting_date": {
+                                    "_Date__ordinal": 738864,
+                                    "_Date__year": 2023,
+                                    "_Date__month": 12,
+                                    "_Date__day": 10
+                                }
+                            },
+                            {
+                                "group_name": "Cadagua, S.A.",
+                                "meeting_subject": "Decret sequera, situaci\u00f3 dessalinitzadores",
+                                "meeting_date": {
+                                    "_Date__ordinal": 738589,
+                                    "_Date__year": 2023,
+                                    "_Date__month": 3,
+                                    "_Date__day": 10
+                                }
+                            },
+                            {
+                                "group_name": "Jaume Prat",
+                                "meeting_subject": "Temes relacionats amb la sequera, fauna cineg\u00e8tica i explotacions ramaderes de bov\u00ed i porc\u00ed",
+                                "meeting_date": {
+                                    "_Date__ordinal": 738609,
+                                    "_Date__year": 2023,
+                                    "_Date__month": 3,
+                                    "_Date__day": -2
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            "metadata": {
+                "prompt_tokens": 1310,
+                "completion_tokens": 333,
+                "total_tokens": 1643,
+                "total_cost": 0.0026309999999999997,
+                "start_time": "2024-05-19T19:39:14Z",
+                "end_time": "2024-05-19T19:39:21Z",
+                "query_time": 6.64365291595459
+            }
+        },
+        {
+            "question": {
+                "id": "Q014",
+                "question": "Amb quins grups s'ha parlat m\u00e9s sobre la sequera?"
+            },
+            "answer": {
+                "query": "Amb quins grups s'ha parlat m\u00e9s sobre la sequera?",
+                "result": "No s\u00e9 la resposta.",
+                "intermediate_steps": [
+                    {
+                        "query": "MATCH (g:Group)-[p:PARTICIPATE]->(e:Event {subject: \"sequera\"})\nRETURN g.name, count(p) as num_mentions\nORDER BY num_mentions DESC"
+                    },
+                    {
+                        "context": []
+                    }
+                ]
+            },
+            "metadata": {
+                "prompt_tokens": 735,
+                "completion_tokens": 45,
+                "total_tokens": 780,
+                "total_cost": 0.0011925000000000002,
+                "start_time": "2024-05-19T19:39:21Z",
+                "end_time": "2024-05-19T19:39:23Z",
+                "query_time": 1.6883437633514404
+            }
+        },
+        {
+            "question": {
+                "id": "Q015",
+                "question": "Quines persones han estan m\u00e9s actives en relaci\u00f3 a la sequera? Mostra la llista de les 5 persones per any."
+            },
+            "answer": {
+                "query": "Quines persones han estan m\u00e9s actives en relaci\u00f3 a la sequera? Mostra la llista de les 5 persones per any.",
+                "result": "No s\u00e9 la resposta.",
+                "intermediate_steps": [
+                    {
+                        "query": "MATCH (p:Person)-[r:PARTICIPATE]->(e:Event)\nWHERE e.subject CONTAINS \"sequera\"\nRETURN p.name AS Person, e.date.year AS Year, COUNT(e) AS Activity_Count\nORDER BY Activity_Count DESC\nLIMIT 5"
+                    },
+                    {
+                        "context": [
+                            {
+                                "Person": "Samuel Reyes L\u00f3pez",
+                                "Year": 2023,
+                                "Activity_Count": 9
+                            },
+                            {
+                                "Person": "Elisenda Guillaumes Cullell",
+                                "Year": 2023,
+                                "Activity_Count": 6
+                            },
+                            {
+                                "Person": "David Mascort Subiranas",
+                                "Year": 2024,
+                                "Activity_Count": 6
+                            },
+                            {
+                                "Person": "Carmel M\u00f2dol Bresol\u00ed",
+                                "Year": 2023,
+                                "Activity_Count": 6
+                            },
+                            {
+                                "Person": "Josep Vidal Fabrega",
+                                "Year": 2023,
+                                "Activity_Count": 6
+                            }
+                        ]
+                    }
+                ]
+            },
+            "metadata": {
+                "prompt_tokens": 900,
+                "completion_tokens": 60,
+                "total_tokens": 960,
+                "total_cost": 0.00147,
+                "start_time": "2024-05-19T19:39:23Z",
+                "end_time": "2024-05-19T19:39:25Z",
+                "query_time": 2.01965594291687
+            }
+        },
+        {
+            "question": {
+                "id": "Q016",
+                "question": "Quins organismes han mantingut m\u00e9s reunions per tractar sobre la sequera?"
+            },
+            "answer": {
+                "query": "Quins organismes han mantingut m\u00e9s reunions per tractar sobre la sequera?",
+                "result": "Departament d'Acci\u00f3 Clim\u00e0tica, Alimentaci\u00f3 i Agenda Rural ha mantingut 11 reunions, seguit per Ag\u00e8ncia Catalana de l'Aigua (ACA) i Direcci\u00f3 General d'Agricultura i Ramaderia amb 10 reunions cadascun.",
+                "intermediate_steps": [
+                    {
+                        "query": "MATCH (o:Organization)-[:PARTICIPATE]->(e:Event)\nWHERE e.subject CONTAINS \"sequera\"\nRETURN o.name, COUNT(e) AS num_meetings\nORDER BY num_meetings DESC\nLIMIT 5"
+                    },
+                    {
+                        "context": [
+                            {
+                                "o.name": "Departament d'Acci\u00f3 Clim\u00e0tica, Alimentaci\u00f3 i Agenda Rural",
+                                "num_meetings": 11
+                            },
+                            {
+                                "o.name": "Ag\u00e8ncia Catalana de l'Aigua (ACA)",
+                                "num_meetings": 10
+                            },
+                            {
+                                "o.name": "Direcci\u00f3 General d'Agricultura i Ramaderia",
+                                "num_meetings": 10
+                            },
+                            {
+                                "o.name": "Secretaria d'Alimentaci\u00f3",
+                                "num_meetings": 6
+                            },
+                            {
+                                "o.name": "Secretaria d'Agenda Rural",
+                                "num_meetings": 6
+                            }
+                        ]
+                    }
+                ]
+            },
+            "metadata": {
+                "prompt_tokens": 871,
+                "completion_tokens": 112,
+                "total_tokens": 983,
+                "total_cost": 0.0015305000000000002,
+                "start_time": "2024-05-19T19:39:25Z",
+                "end_time": "2024-05-19T19:39:31Z",
+                "query_time": 6.501211881637573
+            }
+        },
+        {
+            "question": {
+                "id": "Q017",
+                "question": "Quina va ser la reuni\u00f3 amb m\u00e9s participants l'any 2023?"
+            },
+            "answer": {
+                "query": "Quina va ser la reuni\u00f3 amb m\u00e9s participants l'any 2023?",
+                "result": "No s\u00e9 la resposta.",
+                "intermediate_steps": [
+                    {
+                        "query": "MATCH (e:Event)-[r:PARTICIPATE]->(p:Person)\nWHERE e.date >= date(\"2023-01-01\") AND e.date <= date(\"2023-12-31\")\nRETURN e.subject AS meeting, COUNT(p) AS num_participants\nORDER BY num_participants DESC\nLIMIT 1"
+                    },
+                    {
+                        "context": []
+                    }
+                ]
+            },
+            "metadata": {
+                "prompt_tokens": 739,
+                "completion_tokens": 73,
+                "total_tokens": 812,
+                "total_cost": 0.0012545000000000002,
+                "start_time": "2024-05-19T19:39:31Z",
+                "end_time": "2024-05-19T19:39:33Z",
+                "query_time": 2.3956727981567383
+            }
+        },
+        {
+            "question": {
+                "id": "Q018",
+                "question": "Qu\u00e8 saps del conveni 2022/9/0304?"
+            },
+            "answer": {
+                "query": "Qu\u00e8 saps del conveni 2022/9/0304?",
+                "result": "No information is available about the conveni 2022/9/0304.",
+                "intermediate_steps": [
+                    {
+                        "query": "MATCH (a:Agreement)\nWHERE a.code = \"2022/9/0304\"\nRETURN a.subject, a.signees_gencat, a.signees_other, a.signature_date, a.validity_date, a.title, a.document"
+                    },
+                    {
+                        "context": [
+                            {
+                                "a.subject": "Fons MRR i Next Generation EU",
+                                "a.signees_gencat": "Avalis de Catalunya SGR; Ag\u00e8ncia de l'Habitatge de Catalunya (AHC); Departament d'Economia i Hisenda ; Departament de Drets Socials ; Institut Catal\u00e0 de Finances (ICF)",
+                                "a.signees_other": null,
+                                "a.signature_date": {
+                                    "_Date__ordinal": 738204,
+                                    "_Date__year": 2022,
+                                    "_Date__month": 2,
+                                    "_Date__day": 18
+                                },
+                                "a.validity_date": {
+                                    "_Date__ordinal": 739665,
+                                    "_Date__year": 2026,
+                                    "_Date__month": 2,
+                                    "_Date__day": 18
+                                },
+                                "a.title": "Conveni entre l'Ag\u00e8ncia de l'Habitatge de Catalunya, el Departament d'Economia i Hisenda, Avalis de Catalunya, SGR, l'Institut Catal\u00e0 de Finances i diverses entitats financeres, per al finan\u00e7ament a comunitats de propietaris i persones f\u00edsiques i jur\u00eddiques privades, per als programes d'ajudes en mat\u00e8ria de rehabilitaci\u00f3 residencial del Pla de recuperaci\u00f3, transformaci\u00f3 i resili\u00e8ncia, finan\u00e7at en el marc dels fons Next Generation EU.",
+                                "a.document": "https://registredeconvenis.gencat.cat/drep_rccc/public/Convenis.do?accion=DownloadDocumentsConveni&numFila=0&numConveni=2022/P/0126"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "metadata": {
+                "prompt_tokens": 1052,
+                "completion_tokens": 67,
+                "total_tokens": 1119,
+                "total_cost": 0.001712,
+                "start_time": "2024-05-19T19:39:33Z",
+                "end_time": "2024-05-19T19:39:35Z",
+                "query_time": 1.921760082244873
+            }
+        },
+        {
+            "question": {
+                "id": "Q019",
+                "question": "Qui ha signat el conveni 2022/9/0304? Inclou tots els convenis relacionats. Llista les entitats i el nom de la persona i el seu c\u00e0rrec."
+            },
+            "answer": {
+                "query": "Qui ha signat el conveni 2022/9/0304? Inclou tots els convenis relacionats. Llista les entitats i el nom de la persona i el seu c\u00e0rrec.",
+                "result": "No s\u00e9 la resposta.",
+                "intermediate_steps": [
+                    {
+                        "query": "MATCH (p:Person)-[r:PARTICIPATE]->(e:Event)-[:LINKED_TO]->(a:Agreement)\nWHERE a.code = \"2022/9/0304\"\nRETURN p.name AS person_name, r.role AS person_role, e.subject AS event_subject, a.title AS agreement_title, a.subject AS agreement_subject"
+                    },
+                    {
+                        "context": []
+                    }
+                ]
+            },
+            "metadata": {
+                "prompt_tokens": 795,
+                "completion_tokens": 77,
+                "total_tokens": 872,
+                "total_cost": 0.0013464999999999998,
+                "start_time": "2024-05-19T19:39:35Z",
+                "end_time": "2024-05-19T19:39:38Z",
+                "query_time": 2.2844932079315186
+            }
+        },
+        {
+            "question": {
+                "id": "Q020",
+                "question": "Llista totes les persones, organitzacions i grups que han signat el conveni 2022/9/0304. Inclou tots els convenis relacionats amb el 2022/9/0304."
+            },
+            "answer": {
+                "query": "Llista totes les persones, organitzacions i grups que han signat el conveni 2022/9/0304. Inclou tots els convenis relacionats amb el 2022/9/0304.",
+                "result": "Generated Cypher Statement is not valid\n{code: Neo.ClientError.Statement.SyntaxError} {message: All sub queries in an UNION must have the same return column names (line 3, column 1 (offset: 185))\n\"UNION\"\n ^}"
+            },
+            "metadata": {
+                "start_time": "2024-05-19T19:39:38Z",
+                "end_time": "2024-05-19T19:39:41Z",
+                "query_time": 3.1362361907958984
+            }
+        }
+    ]
+}
