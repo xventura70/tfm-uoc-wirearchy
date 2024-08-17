@@ -7,6 +7,7 @@
 - Project Supervisor: Francesc Julbe López
 - Coordinating Professor: Albert Solé Ribalta
 - Date of submission: 06/2024
+- Master Thesis Report: [Application of LLM-Augmented Knowledge Graphs for Wirearchy Management](http://hdl.handle.net/10609/151127).
 
 ### Abstract
 Today’s organization structures are porous, where formal hierarchies are intertwined with dynamic networks of interactions. This situation was coined as “Wirearchy”. These structures are often volatile making very difficult to have a reliable picture of the actual organization. This unclarity can make some decision process difficult when not risky. Even worse pieces of the full picture sit with a few individuals eventually jeopardizing this corporate knowledge.
